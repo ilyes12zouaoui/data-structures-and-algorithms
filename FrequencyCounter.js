@@ -46,16 +46,58 @@ const ferequencyCounter = (arr1, arr2) => {
   return true;
 };
 
+const ferequencyCounterV2 = (arr1, arr2) => {
+  //if the arrays have the same size
+  if (arr1.length != arr2.length) return false;
+
+  //create an object that have the value as key and the frequency as value
+  let frequencyArr1 = {};
+
+  for (let number of arr1) {
+    frequencyArr1[number] = (frequencyArr1[number] || 0) + 1;
+  }
+
+  for (let number of arr2) {
+    //check if the double number exists in frequency object if it exists do minus one to frequency else
+    //that means it's found in arr2 but there is zero occurency of it in the frequency object so return false
+    if (frequencyArr1[number / 2]) {
+      frequencyArr1[number / 2]--;
+    } else return false;
+  }
+
+  return true;
+};
+
 let arr1 = [2, 2, 4];
 let arr2 = [4, 8, 4];
+
+let arr11 = [2, 2, 4];
+let arr22 = [4, 8, 4];
+
 let arr3 = [5, 2];
 let arr4 = [4, 10, 4];
 let arr5 = [8, 8, 20];
 
-console.time("naive function");
-console.log("naive function result", naiveSolution(arr1, arr2));
-console.timeEnd("naive function");
+let arr6 = [6, 12, 6];
+let arr7 = [6, 3, 3];
 
-console.time("ferequencyCounter function");
+console.time("naive");
+naiveSolution(arr1, arr2);
+console.timeEnd("naive");
+
+console.time("ferequencyCounter");
+ferequencyCounter(arr4, arr5);
+console.timeEnd("ferequencyCounter");
+
+console.time("ferequencyCounterV2");
+ferequencyCounterV2(arr4, arr5);
+console.timeEnd("ferequencyCounterV2");
+
 console.log("ferequencyCounter function result", ferequencyCounter(arr4, arr5));
-console.timeEnd("ferequencyCounter function");
+
+console.log(
+  "ferequencyCounterV2 function result",
+  ferequencyCounterV2(arr4, arr5)
+);
+
+console.log("naive function result", naiveSolution(arr11, arr22));
