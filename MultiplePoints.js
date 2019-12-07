@@ -42,3 +42,31 @@ console.timeEnd("sumZero");
 console.log("naive function result", naiveSolution(arr1));
 
 console.log("sumZero result", sumZero(arr1));
+
+//example a sorted array where we search for the number of unique values
+
+const uniqueValues = numbers => {
+  if (numbers.length == 0) return 0;
+  if (numbers.length == 1) return 1;
+  if (numbers[0] == numbers[numbers.length - 1]) return 0;
+
+  let uniqueArr = [numbers[0]];
+  let i = 0;
+  let j = 1;
+
+  while (j < numbers.length) {
+    if (numbers[j] > uniqueArr[i]) {
+      i++;
+      uniqueArr.push(numbers[j]);
+    }
+    j++;
+  }
+
+  return i + 1;
+};
+let arr2 = [1, 2, 2, 3, 3, 3, 5, 5];
+console.time("uniqueValues");
+uniqueValues(arr2);
+console.timeEnd("uniqueValues");
+
+console.log("uniqueValues function result", uniqueValues(arr2));
