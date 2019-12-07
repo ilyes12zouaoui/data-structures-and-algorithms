@@ -1,6 +1,6 @@
-//this patter is used when you have two data related somehow to each other, and you gonna compare them with taking
+//this pattern is used when you have two data related somehow to each other, and you gonna compare them with taking
 //the frequency of the data in consideration
-//=> compareson + frequency
+//=> comparison + frequency
 
 const naiveSolution = (arr1, arr2) => {
   //if the arrays have the same size
