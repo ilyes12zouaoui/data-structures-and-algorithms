@@ -4,17 +4,24 @@ and operations that you can apply on them.
 *Array (index and value)
 +has order
 +fast insert and delete at the end
++access element with index
 -slow insert and delete at the start
--search
 
 ------------------------------------
 *HashTable (key and value)
 +fast to search in keys
 +fast insert and delete
++access element with key
 -unordered
 
 ------------------------------------
-*LinkedList
+*LinkedList (Node = {value, pointer to next node})
+( Head, Tail, Length )
++has order
++fast insert and delete at the Head and Tail
+-can't access element directly in the middle
+
+
 
 
 
