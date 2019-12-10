@@ -5,7 +5,7 @@ and operations that you can apply on them.
 +has order
 +fast insert and delete at the end
 +access element with index
--slow insert and delete at the start
+-slow insert and delete at the beginning
 
 ------------------------------------
 *HashTable (key and value)
@@ -18,8 +18,10 @@ and operations that you can apply on them.
 *LinkedList (Node = {value, pointer to next node})
 ( Head, Tail, Length )
 +has order
-+fast insert and delete at the Head and Tail
--can't access element directly in the middle
++fast insert and delete at the Head
++fast insert at the head
+-slow delete at the tail
+-can't access element directly, you need to start from the head and traverse node by node
 
 
 
