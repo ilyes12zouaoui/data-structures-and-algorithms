@@ -206,12 +206,19 @@ class SinglyLinkedList {
 }
 
 let linkedList = new SinglyLinkedList();
-linkedList.push(22);
-linkedList.push(55);
+linkedList.unshift(55);
+linkedList.unshift(54);
 linkedList.push(77);
-linkedList.push(152);
-linkedList.push(221);
+linkedList.push(66);
+linkedList.push(80);
 
 linkedList.showInArray();
+
+linkedList.insert(2, 74);
+linkedList.showInArray();
+
+linkedList.remove(3);
+linkedList.showInArray();
+
 linkedList.reverse();
 linkedList.showInArray();
