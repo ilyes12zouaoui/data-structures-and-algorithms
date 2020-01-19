@@ -1,0 +1,14 @@
+*comparison algorithmes
+-insertion sort
+-bubble sort
+-select sort
+-merge sort
+-quick sort
+
+*which sorting algorithme to use ?
+-Insertion algorithme has a O(n) in best case, so if you have a small array and it's almost sorted this is the best algorithme to use.
+-Merge algorithme has a stable O(nlog(n)) complexity in any case, so if you are afraid of the worst case this is the one, but his space complexity is O(n).
+
+
+
+
