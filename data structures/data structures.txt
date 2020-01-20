@@ -58,7 +58,7 @@ Search O(log(n))
 
 -travesing a tree
 Breadth-first search (BFS)
-Depth-first Search (DFS)
+Depth-first Search (DFS) (preorder,postorder,inorder)
 
 
 
