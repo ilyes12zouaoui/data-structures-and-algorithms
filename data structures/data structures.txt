@@ -4,8 +4,9 @@ and operations that you can apply on them.
 *Array (index and value)
 +has order
 +fast insert and delete at the end
-+access element with index
++access element with index (the elements of an array are stored next to each other so it's faster to accesss them)
 -slow insert and delete at the beginning
+(dynamic arrays, once it needs more memory it will be relocated to another address in memory with more free space)
 
 ------------------------------------
 *HashTable (key and value)
@@ -22,6 +23,44 @@ and operations that you can apply on them.
 +fast insert at the head
 -slow delete at the tail
 -can't access element directly, you need to start from the head and traverse node by node
+(every element of the linked list is stored in a place in memory, they don't have to be next to each other, so you can add as much as you want without need for 
+a memory relecation, unlike dynamic arrays)
+
+
+--------------------------------------
+*Stack
+LIFO principle (last in first out)
+
+*Queue
+FIFO principle (first in first out)
+
+---------------------------------------
+*Trees
+nodes related to each other, each node has only one parent, so there is one path only to get from one node to another, tree is nolinear, cause a node can have
+multiple shildren so there is multiple paths to choose from.
+
+Root, 
+Child, 
+Sibling (two nodes that have the same parent), 
+Parent, 
+Leaf (node without children), 
+Edge (connection between two nodes)
+
+**Binary tree
+each parent can have 0 or 1 or 2 children only no more.
+
+***Binary search tree
+nodes of this tree are sortable you can compare them, every child on the left are less the parent node value, all nodes on the right are greater than the parent node 
+so nodes are kept in a specific order.
+
+Insertion O(log(n))
+Search O(log(n))
+
+-travesing a tree
+Breadth-first search (BFS)
+Depth-first Search (DFS)
+
+
 
 
 
