@@ -32,7 +32,7 @@ class MaxBinaryHeap {
     //remove the top element and put the last element is his place
     //compare the new top element with the two children and swap with the bigger one
     //repeat t'ill the children are smaller than that element or there no more children
-
+    let max = this.array[0];
     this.array[0] = this.array[this.array.length - 1];
     this.array.pop();
     let index = 0;
@@ -79,6 +79,7 @@ class MaxBinaryHeap {
         break;
       }
     }
+    return max;
   }
 }
 

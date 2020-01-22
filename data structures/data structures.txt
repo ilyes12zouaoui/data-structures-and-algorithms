@@ -9,12 +9,15 @@ and operations that you can apply on them.
 (dynamic arrays, once it needs more memory it will be relocated to another address in memory with more free space)
 
 ------------------------------------
-*HashTable (key and value)
+*HashTable (key and value pairs, unique keys)
 +fast to search in keys
 +fast insert and delete
 +access element with key
 -unordered
 
+hash function takes a key or string or any form of data with random size and gives a unique number with fixed size
+//determinisitic (for the same input we get the same result), fast (O(1)), low collusion .
+strategies to solve collusion: separate chaining (store nested arrays)
 ------------------------------------
 *LinkedList (Node = {value, pointer to next node})
 ( Head, Tail, Length )
@@ -60,8 +63,19 @@ Search O(log(n))
 Breadth-first search (BFS)
 Depth-first Search (DFS) (preorder,postorder,inorder)
 
+**Heap
 
+***Max Binary Heap
+-each parent is biger than his children
+-each parent should have as max children as possible, maximum 2
 
+insert O(log(n))
+remove O(log(n))
+search O(n)
+
+***Min Binary Heap
+-each parent is smaller than his children
+-each parent should have as max children as possible, maximum 2
 
 
 
