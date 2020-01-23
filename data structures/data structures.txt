@@ -9,7 +9,7 @@ and operations that you can apply on them.
 (dynamic arrays, once it needs more memory it will be relocated to another address in memory with more free space)
 
 ------------------------------------
-*HashTable (key and value pairs, unique keys)
+*HashTable (key and value pairs)
 +fast to search in keys
 +fast insert and delete
 +access element with key
@@ -17,7 +17,7 @@ and operations that you can apply on them.
 
 hash function takes a key or string or any form of data with random size and gives a unique number with fixed size
 //determinisitic (for the same input we get the same result), fast (O(1)), low collusion .
-strategies to solve collusion: separate chaining (store nested arrays)
+strategy to solve collusion: separate chaining (store nested arrays)
 ------------------------------------
 *LinkedList (Node = {value, pointer to next node})
 ( Head, Tail, Length )
@@ -77,6 +77,39 @@ search O(n)
 -each parent is smaller than his children
 -each parent should have as max children as possible, maximum 2
 
+
+---------------------------
+*Graph
+node : vertex
+connection : edge
+-directed graph, undirected graph (edge in both ways always)
+-weighted graph (each edge has a weight)
+
+-to represent a graph we usally use
+**adjacency matrix
+- A B C
+A 0 1 1
+B 1 0 0
+C 1 0 0
+//each 1 represent a connection between two nodes
+
+-takes much space
+-slower to iterate over all the edges
++faster to lookup a specific edge
+
+**adjacency list
+[[2,1],[0,2],[0,1]]
+//the index of each node represent a node, the value is an array that contains the nodes that have a connection with it
+//if the nodes value are not numbers we use hashtable
+{
+ "A" : ["B","C"],
+ "B" : ["A","C"],
+ "C" : ["A","B"]
+}
+
+-can be slow to lookup a specific edge
++takes less space
++faster to iterate over all the edges
 
 
 
